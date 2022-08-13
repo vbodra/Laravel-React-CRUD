@@ -89,7 +89,21 @@ class User extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            $name       = $request->get('name');
+            $age        = $request->get('age');
+            $birth_date = $request->get('birth_date');
+
+            userModel::where('id', $id)->update([
+                'name' => $name,
+                'age' => $age,
+                'birth_date' => $birth_date,
+            ]);
+
+            return response()->json([
+                'name' => $name,
+                'age' => $age,
+                'birth_date' => $birth_date,
+            ]);
     }
 
     /**
@@ -100,6 +114,6 @@ class User extends Controller
      */
     public function destroy($id)
     {
-        //
+        userModel::where('id', $id)->delete();
     }
 }

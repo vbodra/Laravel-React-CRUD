@@ -26,14 +26,15 @@ export default function UserTable(props) {
               </div>
           </header>
 
-          <div class="container" style={{paddingTop: "30px"}}>
-            <table class="table table-hover table-success">
+          <div className="container" style={{paddingTop: "30px"}}>
+            <table className="table table-hover table-success">
               <thead>
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Nome</th>
                   <th scope="col">Idade</th>
                   <th scope="col">Aniversário</th>
+                  <th scope="col">Ações</th>
                 </tr>
               </thead>
               <tbody>
