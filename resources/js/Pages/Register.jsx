@@ -4,8 +4,8 @@ import axios from 'axios';
 
 export default function Register() {
   async function createUser() {
-      const createdUser = await axios.post('/User', {name, age, birth_date});
-      return createdUser;
+      await axios.post('/User', {name, age, birth_date});
+      location.replace('/userTable');
   }
 
   const [name, setName] = useState('');
